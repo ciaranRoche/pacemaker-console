@@ -1,5 +1,5 @@
 <object-stream>
-  <list>
+  <linked-list>
     <models.User>
       <firstName>Bart</firstName>
       <lastName>Simpson</lastName>
@@ -18,5 +18,5 @@
       <email>bart@simpson.com</email>
       <password>secret</password>
     </models.User>
-  </list>
+  </linked-list>
 </object-stream>
