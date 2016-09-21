@@ -12,6 +12,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import models.User;
 import utils.FileLogger;
 
+
 public class Main{
   public static void main(String[] args) throws IOException{
 	FileLogger logger = FileLogger.getLogger();
