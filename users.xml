@@ -30,5 +30,11 @@
       <email>comicbookguy@simpson.com</email>
       <password>secret</password>
     </models.User>
+    <models.User>
+      <firstName>Maggie</firstName>
+      <lastName>Simpson</lastName>
+      <email>maggie@simpson.com</email>
+      <password>secret</password>
+    </models.User>
   </linked-list>
 </object-stream>

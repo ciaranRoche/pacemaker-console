@@ -9,7 +9,7 @@ import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
-//import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 
 import models.User;
@@ -31,10 +31,16 @@ public class Main{
     System.out.println(users);
     
     logger.log("Serializing contacts to XML");
-    XStream xstream = new XStream(new JettisonMappedXmlDriver());
-    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("users.json"));
+    XStream xstream = new XStream(new DomDriver());
+    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("users.xml"));
     out.writeObject(users);
     out.close(); 
+    
+  //  logger.log("Serializing contacts to Json");
+  //  XStream xstream1 = new XStream(new JettisonMappedXmlDriver());
+  //  ObjectOutputStream out1 = xstream.createObjectOutputStream(new FileWriter("users.json"));
+  //  out.writeObject(users);
+  //  out.close(); 
     
     logger.log("Finished - shutting down");
   }
