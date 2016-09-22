@@ -8,7 +8,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+//import com.thoughtworks.xstream.io.xml.DomDriver;
+
 
 import models.User;
 import utils.FileLogger;
@@ -23,11 +25,14 @@ public class Main{
     users.add(new User("Bart", "Simpson", "bart@simpson.com", "secret"));
     users.add(new User("Homer", "Simpson", "bart@simpson.com", "secret"));
     users.add(new User("Lisa", "Simpson", "bart@simpson.com", "secret"));
+    users.add(new User("Ciaran", "Roche", "ciaran@simpson.com", "secret"));
+    users.add(new User("Comic", "Book Guy", "comicbookguy@simpson.com", "secret"));
+    users.add(new User("Maggie", "Simpson", "maggie@simpson.com", "secret"));
     System.out.println(users);
     
     logger.log("Serializing contacts to XML");
-    XStream xstream = new XStream(new DomDriver());
-    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("users.xml"));
+    XStream xstream = new XStream(new JettisonMappedXmlDriver());
+    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("users.json"));
     out.writeObject(users);
     out.close(); 
     

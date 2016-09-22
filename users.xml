@@ -18,5 +18,17 @@
       <email>bart@simpson.com</email>
       <password>secret</password>
     </models.User>
+    <models.User>
+      <firstName>Ciaran</firstName>
+      <lastName>Roche</lastName>
+      <email>ciaran@simpson.com</email>
+      <password>secret</password>
+    </models.User>
+    <models.User>
+      <firstName>Comic</firstName>
+      <lastName>Book Guy</lastName>
+      <email>comicbookguy@simpson.com</email>
+      <password>secret</password>
+    </models.User>
   </linked-list>
 </object-stream>
